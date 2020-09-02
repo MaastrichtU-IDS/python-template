@@ -1,3 +1,6 @@
 
 *.pyc
 *.iml
+
+name_placeholder.egg-info
+.eggs

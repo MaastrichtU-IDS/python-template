@@ -1,34 +1,47 @@
-# CI Workshop Template
+# Python Template
 
-This template was created to be used in the IDS [CI workshop](https://maastrichtu-ids.github.io/workshop-ci/)
+## How to use this template
 
-`Add workflow pass badges`
+* For the directory name, *Dockerfile*, *setup.py* and *test_application.py*, Replace all instances of *name_placeholder* to the package name of your choice using [snake case](https://en.wikipedia.org/wiki/Snake_case).
+* Leave the headers as is and update the instructions below to the specifics of your tool.
+* Remove this *How to use this template section*
 
-### Development environment
+Write a short description of the software here.
 
-You can provide commands to run in codeblocks
+## Prerequisites
 
-```bash
-sudo apt-get install vim
+* pip and Python 3.8 or higher
+* Docker
+
+
+## Installation
+
+```
+pip install -e .
 ```
 
-Or Python code:
+## Usage
+To run name_placeholder, run the following in your terminal:
+```
+name_placeholder hello-world test
+```
+See ```name_placeholder hello-world test``` for more instructions.
 
-```python
-def myfunction(self):
-	return "Hello, World"
+## Building and Publishing
+
+
+## Docker
+In order to build and run the docker container run the following commands:
+
+```
+docker build . -t
+docker run name-placeholder name_placeholder hello-world test
 ```
 
-> With a comment about the code
+## CI/CD and Testing
 
-But code can also be `provided inline`.
-
-### Deploy with Docker
-
-Documentation to deploy the application using Docker.
-
-With detail to build the Docker image from source code.
-
-### Detail about CI/CD
-
-GitHub Actions and DockerHub references
+Tests can be run locally by running the following:
+```
+pip install -U pytest
+pytest
+```

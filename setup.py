@@ -9,18 +9,18 @@
 from setuptools import setup, find_packages
 
 setup(
-    version='0.0.1',
-    name='workshop_ci',
+    version='0.1.0',
+    name='name_placeholder',
     license='MIT License',
-    description='A sample application to test GitHub actions',
+    description='',
     author='Firstname Lastname',
     author_email='my.email@protonmail.com',
-    url='https://github.com/MaastrichtU-IDS/workshop-ci-template',
-    packages=find_packages(include=['workshop_ci']),
-    package_dir={'workshop_ci': 'workshop_ci'},
+    url='',
+    packages=find_packages(include=['name_placeholder']),
+    package_dir={'name_placeholder': 'name_placeholder'},
     entry_points={
         'console_scripts': [
-            'workshop_ci=workshop_ci.__main__:main',
+            'name_placeholder=name_placeholder.__main__:main',
         ],
     },
 

@@ -8,18 +8,16 @@ import click
 import logging
 import sys
 
-from .application import App
-
+from name_placeholder.application import App
 
 @click.command()
 @click.argument('first_name')
-@click.argument('last_name')
 @click.option('--verbose', is_flag=True, help="Will print verbose messages.")
-def hello_world(first_name, last_name, verbose):
+def hello_world(first_name, verbose):
     app = App()
     if verbose:
         print("Performing hello world.")
-    print(app.get_hello_world(first_name, last_name))
+    print(app.get_hello_world(first_name))
 
 
 @click.group()

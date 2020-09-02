@@ -1,9 +1,9 @@
 import pytest
 
-from workshop_ci.application import App
+from name_placeholder.application import App
 
 
-@pytest.fixture
+@pytest.fixture(autouse=True)
 def app():
     return App()
 
@@ -11,4 +11,4 @@ def app():
 class TestApplication(object):
 
     def test_return_value(self, app):
-        assert app.get_hello_world() == "Hello, World"
+        assert app.get_hello_world("test") == "Hello World, test"
