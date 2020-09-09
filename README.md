@@ -1,3 +1,5 @@
+[![Run tests](https://github.com/MaastrichtU-IDS/python-template/workflows/Run%20tests/badge.svg)](https://github.com/MaastrichtU-IDS/python-template/actions?query=workflow%3A%22Run+tests%22)
+
 # Python Template
 
 ## How to use this template
@@ -10,38 +12,64 @@ Write a short description of the software here.
 
 ## Prerequisites
 
-* pip and Python 3.8 or higher
+* pip and Python 3.6 or higher
 * Docker
-
 
 ## Installation
 
-```
-pip install -e .
+```bash
+pip3 install -e .
 ```
 
 ## Usage
 To run name_placeholder, run the following in your terminal:
-```
+```bash
 name_placeholder hello-world test
 ```
 See ```name_placeholder hello-world test``` for more instructions.
 
-## Building and Publishing
+## Test and Publish
 
+### Continuous Integration
 
-## Docker
-In order to build and run the docker container run the following commands:
+This repository uses [GitHub Actions](/actions) to:
 
+* Automatically run tests at each push to the `master` branch
+* Publish the package to [PyPI](https://pypi.org) when a release is created (N.B.: the version of the package needs to be increased in [setup.py](/blob/master/setup.py#L6) before).
+
+> You will need to provide your login credentials using secrets in the repository settings to publish to PyPI: `PYPI_USERNAME` and `PYPI_PASSWORD`
+
+### Test locally
+
+Install PyTest:
+
+```bash
+pip3 install -U pytest
 ```
-docker build . -t
-docker run name-placeholder name_placeholder hello-world test
-```
 
-## CI/CD and Testing
+Run the tests:
 
-Tests can be run locally by running the following:
-```
-pip install -U pytest
+```bash
 pytest
 ```
+
+Run a specific test in a file, and display `print` in the output:
+
+```bash
+pytest tests/test_application.py::TestApplication::test_return_value -s
+```
+
+## Docker
+
+Build the image:
+
+```bash
+docker build -t name-placeholder .
+```
+
+Run a container:
+
+```bash
+docker run -it --rm name-placeholder hello-world test
+```
+
