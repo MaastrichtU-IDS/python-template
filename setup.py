@@ -4,18 +4,20 @@ from setuptools import setup, find_packages
 
 setup(
     version='0.1.0',
-    name='name_placeholder',
+    name='name-placeholder',
     license='MIT License',
     description='',
     author='Firstname Lastname',
     author_email='my.email@protonmail.com',
     url='',
     packages=find_packages(),
-    package_data={'': ['*.yml']},
+    # packages=find_packages(include=['name_placeholder']),
+    # package_dir={'name_placeholder': 'name_placeholder'},
+    # package_data={'': ['*.yml']},
     include_package_data=True,
     entry_points={
         'console_scripts': [
-            'name_placeholder=name_placeholder.__main__:main',
+            'name-placeholder=name_placeholder.__main__:main',
         ],
     },
 

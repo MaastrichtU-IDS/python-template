@@ -12,8 +12,8 @@ Write a short description of the software here.
 
 ## Prerequisites
 
-* pip and Python 3.6 or higher
-* Docker
+* Python 3.6 or higher, with [pip](https://pip.pypa.io/en/stable/)
+* Docker (optional)
 
 ## Installation
 
@@ -21,13 +21,14 @@ Write a short description of the software here.
 pip3 install -e .
 ```
 
-## Usage
-To run name_placeholder, run the following in your terminal:
-```bash
-name_placeholder hello-world test
-```
-See ```name_placeholder hello-world test``` for more instructions.
+> Flag `-e`: changes to the source code will be automatically taken into account when using the package.
 
+## Usage
+
+Run the `name-placeholder` CLI in your terminal:
+```bash
+name-placeholder hello-world test
+```
 ## Test and Publish
 
 ### Continuous Integration
@@ -37,7 +38,7 @@ This repository uses [GitHub Actions](/actions) to:
 * Automatically run tests at each push to the `master` branch
 * Publish the package to [PyPI](https://pypi.org) when a release is created (N.B.: the version of the package needs to be increased in [setup.py](/blob/master/setup.py#L6) before).
 
-> You will need to provide your login credentials using secrets in the repository settings to publish to PyPI: `PYPI_USERNAME` and `PYPI_PASSWORD`
+> You will need to provide your login credentials using [secrets in the repository settings](/settings/secrets) to publish to [PyPI](https://pypi.org): `PYPI_USERNAME` and `PYPI_PASSWORD`
 
 ### Test locally
 
