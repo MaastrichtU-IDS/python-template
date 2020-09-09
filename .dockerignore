@@ -1,9 +1,8 @@
+dist/
 build/
 *.egg-info
 .eggs/
-dist/
 __pycache__/
-
 *.pyc
 *.iml
 
