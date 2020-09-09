@@ -10,7 +10,7 @@ Write a short description of the software here.
 
 ## Prerequisites
 
-* pip and Python 3.8 or higher
+* pip and Python 3.6 or higher
 * Docker
 
 
