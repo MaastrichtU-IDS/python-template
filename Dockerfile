@@ -1,11 +1,10 @@
-FROM python:3.7 
+FROM python:3.7
 
 RUN pip install --upgrade pip
 
-COPY . .
-
 # Install from source code
-RUN pip install .
+COPY . .
+RUN pip install -e .
 
-ENTRYPOINT [ "name_placeholder" ]
+ENTRYPOINT [ "name-placeholder" ]
 CMD [ "hello-word Docker" ]
