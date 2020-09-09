@@ -4,7 +4,7 @@ import click
 import logging
 import sys
 
-from name_placeholder.application import App
+from my_package.application import App
 
 @click.command()
 @click.argument('first_name')

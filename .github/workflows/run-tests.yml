@@ -6,7 +6,7 @@ on:
     branches: [ master ]
     paths:
     - 'requirements.txt'
-    - 'name_placeholder/**'
+    - 'my_package/**'
     - 'tests/**'
     - '.github/workflows/*'
 

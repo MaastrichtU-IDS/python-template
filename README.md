@@ -1,12 +1,12 @@
 [![Run tests](https://github.com/MaastrichtU-IDS/python-template/workflows/Run%20tests/badge.svg)](https://github.com/MaastrichtU-IDS/python-template/actions?query=workflow%3A%22Run+tests%22)
 
-# Python Template
-
 ## How to use this template
 
-* For the directory name, *Dockerfile*, *setup.py* and *test_application.py*, Replace all instances of *name_placeholder* to the package name of your choice using [snake case](https://en.wikipedia.org/wiki/Snake_case).
+* For the directory name, *Dockerfile*, *setup.py* and *test_application.py*, Replace all instances of **my_package** and **my-package** to the package name of your choice using [snake case](https://en.wikipedia.org/wiki/Snake_case) or dash depending on the convention.
 * Leave the headers as is and update the instructions below to the specifics of your tool.
 * Remove this *How to use this template section*
+
+## My package
 
 Write a short description of the software here.
 
@@ -17,19 +17,35 @@ Write a short description of the software here.
 
 ## Installation
 
+> Provide instructions to install the package
+
+The package can be installed from the source code, see below to run with Docker. Using `-e` means that changes to the source code will be automatically update the package locally.
+
 ```bash
 pip3 install -e .
 ```
 
-> Flag `-e`: changes to the source code will be automatically taken into account when using the package.
-
 ## Usage
 
-Run the `name-placeholder` CLI in your terminal:
+> Provide working examples on how to run the package
+
+Run the `my-package` CLI in your terminal:
+
 ```bash
-name-placeholder hello-world test
+my-package hello-world "Python test"
 ```
+Or in a Python script:
+
+```python
+from my_package.application import App
+
+app = App()
+print(app.get_hello_world('Python test'))
+```
+
 ## Test and Publish
+
+> Document how to run the tests, and if they are run automatically.
 
 ### Continuous Integration
 
@@ -65,12 +81,12 @@ pytest tests/test_application.py::TestApplication::test_return_value -s
 Build the image:
 
 ```bash
-docker build -t name-placeholder .
+docker build -t my-package .
 ```
 
 Run a container:
 
 ```bash
-docker run -it --rm name-placeholder hello-world test
+docker run -it --rm my-package hello-world "Python test"
 ```
 

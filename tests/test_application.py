@@ -1,6 +1,6 @@
 import pytest
 
-from name_placeholder.application import App
+from my_package.application import App
 
 
 @pytest.fixture(autouse=True)
