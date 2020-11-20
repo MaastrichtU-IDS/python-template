@@ -7,4 +7,5 @@ COPY . .
 RUN pip install -e .
 
 ENTRYPOINT [ "my-package" ]
+# Default arguments if nothing provided:
 CMD [ "hello-word Docker" ]
